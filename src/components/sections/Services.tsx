@@ -7,14 +7,14 @@ import { cn } from '@/lib/utils';
 
 const services = [
   {
-    title: 'AI Chatbot Development',
+    title: 'AI Chatbot/Voicebot Development',
     description: 'Easy to use AI chatbots that are trained on your business who can answer ALL your clients questions, recommend products & services, book appointments, capture leads.',
     icon: <MessageSquare className="w-6 h-6" />,
     delay: 0.1,
   },
   {
-    title: 'AI Content Creation',
-    description: "Our content creation solutions effortlessly generate high-quality, engaging content according to your brand's guidelines to captivate your audience.",
+    title: 'Saas Programs AI Production',
+    description: "Produce and deploy simple and ready to use custom Saas that your business can use to optimise any part of your work, be that a program that helps review documents amd much more.",
     icon: <FileText className="w-6 h-6" />,
     delay: 0.2,
   },
