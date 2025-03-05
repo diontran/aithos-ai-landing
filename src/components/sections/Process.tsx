@@ -56,46 +56,6 @@ const Process: React.FC = () => {
             </div>
           ))}
         </div>
-        
-        <div className="mt-20 glass-card rounded-xl overflow-hidden animate-fade-in-up opacity-0" style={{ animationDelay: '0.4s' }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-            <div className="rounded-lg overflow-hidden bg-gradient-to-br from-aithos-blue/20 to-aithos-accent/10 flex items-center justify-center p-8">
-              <div className="text-3xl font-bold gradient-text">AI Analytics Dashboard</div>
-            </div>
-            <div className="flex flex-col justify-center">
-              <h3 className="text-2xl font-bold mb-4">Measurable Results</h3>
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Software speed</span>
-                    <span className="text-aithos-accent">+38%</span>
-                  </div>
-                  <div className="w-full bg-secondary/50 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-aithos-blue to-aithos-accent h-2 rounded-full" style={{ width: '88%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Workflow efficiency</span>
-                    <span className="text-aithos-accent">+25%</span>
-                  </div>
-                  <div className="w-full bg-secondary/50 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-aithos-blue to-aithos-accent h-2 rounded-full" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Operational cost</span>
-                    <span className="text-aithos-accent">-11%</span>
-                  </div>
-                  <div className="w-full bg-secondary/50 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-aithos-blue to-aithos-accent h-2 rounded-full" style={{ width: '51%' }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -97,18 +97,6 @@ const Hero: React.FC = () => {
             </Button>
           </div>
         </div>
-        
-        <div className="mt-16 md:mt-20 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <div className="glass-card mx-auto max-w-6xl overflow-hidden rounded-xl border border-white/10">
-            <div className="p-1">
-              <div className="h-96 bg-secondary/20 rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="flex items-center justify-center w-full h-full bg-gradient-to-br from-aithos-blue/20 to-aithos-accent/10">
-                  <p className="text-xl text-aithos-accent font-semibold">Aithos AI Dashboard</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
