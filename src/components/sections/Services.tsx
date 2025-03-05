@@ -14,7 +14,7 @@ const services = [
   },
   {
     title: 'AI Content Creation',
-    description: 'Our content creation solutions effortlessly generate high-quality, engaging content according to your brand's guidelines to captivate your audience.',
+    description: "Our content creation solutions effortlessly generate high-quality, engaging content according to your brand's guidelines to captivate your audience.",
     icon: <FileText className="w-6 h-6" />,
     delay: 0.2,
   },
