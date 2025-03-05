@@ -25,7 +25,7 @@ const CTASection: React.FC = () => {
             className="bg-aithos-blue hover:bg-aithos-blue/90 text-primary-foreground px-8 button-bounce button-glow"
             asChild
           >
-            <a href="#contact" className="flex items-center gap-2">
+            <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
               Book demo call
               <ArrowRight size={16} />
             </a>

@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
               className="bg-aithos-blue hover:bg-aithos-blue/90 text-primary-foreground button-bounce button-glow"
               asChild
             >
-              <a href="#contact" className="flex items-center gap-2">
+              <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
                 Book Demo Call
                 <ArrowRight size={16} />
               </a>

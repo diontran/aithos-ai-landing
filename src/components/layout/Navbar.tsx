@@ -57,9 +57,14 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
-          <Button className="button-bounce bg-aithos-blue hover:bg-aithos-blue/90 text-primary-foreground flex items-center gap-2">
-            Book Demo Call
-            <ArrowRight size={16} />
+          <Button 
+            className="button-bounce bg-aithos-blue hover:bg-aithos-blue/90 text-primary-foreground flex items-center gap-2"
+            asChild
+          >
+            <a href="https://zcal.co/diontran/30min">
+              Book Demo Call
+              <ArrowRight size={16} />
+            </a>
           </Button>
         </div>
 
@@ -97,9 +102,12 @@ export const Navbar = () => {
               <Button 
                 className="w-full button-bounce bg-aithos-blue hover:bg-aithos-blue/90 text-primary-foreground flex items-center gap-2 justify-center"
                 onClick={() => setIsMenuOpen(false)}
+                asChild
               >
-                Book Demo Call
-                <ArrowRight size={16} />
+                <a href="https://zcal.co/diontran/30min">
+                  Book Demo Call
+                  <ArrowRight size={16} />
+                </a>
               </Button>
             </li>
           </ul>
