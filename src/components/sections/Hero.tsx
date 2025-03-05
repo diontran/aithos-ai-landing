@@ -102,11 +102,9 @@ const Hero: React.FC = () => {
           <div className="glass-card mx-auto max-w-6xl overflow-hidden rounded-xl border border-white/10">
             <div className="p-1">
               <div className="h-96 bg-secondary/20 rounded-lg overflow-hidden flex items-center justify-center">
-                <img 
-                  src="public/lovable-uploads/a95ba29a-934f-48a3-9713-3b38e5960b24.png" 
-                  alt="Aithos AI Dashboard" 
-                  className="w-full h-full object-cover"
-                />
+                <div className="flex items-center justify-center w-full h-full bg-gradient-to-br from-aithos-blue/20 to-aithos-accent/10">
+                  <p className="text-xl text-aithos-accent font-semibold">Aithos AI Dashboard</p>
+                </div>
               </div>
             </div>
           </div>

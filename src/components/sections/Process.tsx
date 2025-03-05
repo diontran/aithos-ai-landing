@@ -59,12 +59,8 @@ const Process: React.FC = () => {
         
         <div className="mt-20 glass-card rounded-xl overflow-hidden animate-fade-in-up opacity-0" style={{ animationDelay: '0.4s' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-            <div className="rounded-lg overflow-hidden">
-              <img 
-                src="public/lovable-uploads/790aa2fb-452d-49a7-86e2-a3a2ea62d11c.png" 
-                alt="AI Analytics Dashboard" 
-                className="w-full h-full object-cover"
-              />
+            <div className="rounded-lg overflow-hidden bg-gradient-to-br from-aithos-blue/20 to-aithos-accent/10 flex items-center justify-center p-8">
+              <div className="text-3xl font-bold gradient-text">AI Analytics Dashboard</div>
             </div>
             <div className="flex flex-col justify-center">
               <h3 className="text-2xl font-bold mb-4">Measurable Results</h3>
