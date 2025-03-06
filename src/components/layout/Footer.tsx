@@ -55,20 +55,20 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-aithos-accent mt-0.5" />
                 <div>
                   <p className="text-foreground">Aithos AI</p>
-                  <p className="text-muted-foreground">123 Tech Avenue, Suite 200</p>
-                  <p className="text-muted-foreground">San Francisco, CA 94107</p>
+                  <p className="text-muted-foreground">Melbourne</p>
+                  <p className="text-muted-foreground">Victoria, VIC, 3000</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-aithos-accent" />
                 <a href="mailto:contact@aithos.ai" className="text-foreground hover:text-aithos-accent transition-colors">
-                  contact@aithos.ai
+                  dion.doanh.tran@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <PhoneCall className="w-5 h-5 text-aithos-accent" />
                 <a href="tel:+14155559876" className="text-foreground hover:text-aithos-accent transition-colors">
-                  +1 (415) 555-9876
+                  +61 468 959 908
                 </a>
               </div>
             </div>

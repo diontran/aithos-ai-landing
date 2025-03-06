@@ -40,7 +40,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold text-foreground flex items-center gap-2">
           <span className="text-3xl text-aithos-accent">*</span>
-          <span className="gradient-text">Aithos</span>
+          <span className="gradient-text">AithosAI</span>
         </a>
 
         {/* Desktop Navigation */}
