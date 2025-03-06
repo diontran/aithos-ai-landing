@@ -10,6 +10,7 @@ import Team from '@/components/sections/Team';
 import Pricing from '@/components/sections/Pricing';
 import CTASection from '@/components/sections/CTASection';
 import Footer from '@/components/layout/Footer';
+import Chatbot from '@/components/sections/Chatbot';
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 };
