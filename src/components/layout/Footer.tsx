@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <a href="#" className="text-2xl font-bold flex items-center gap-2 mb-4">
               <span className="text-3xl text-aithos-accent">*</span>
-              <span className="gradient-text">Aithos</span>
+              <span className="gradient-text">AithosAI</span>
             </a>
             <p className="text-muted-foreground mb-6">
               AI automation solutions that save time and drive business growth.
@@ -56,7 +56,7 @@ const Footer = () => {
                 <div>
                   <p className="text-foreground">Aithos AI</p>
                   <p className="text-muted-foreground">Melbourne</p>
-                  <p className="text-muted-foreground">Victoria, VIC, 3000</p>
+                  <p className="text-muted-foreground">Victoria 3000</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
