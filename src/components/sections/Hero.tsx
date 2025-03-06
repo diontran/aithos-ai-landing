@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block bg-aithos-blue/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-aithos-blue/20">
+          <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
             <span className="text-sm font-medium text-foreground">
               AI Automation for Modern Businesses
             </span>
@@ -76,10 +76,10 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <Button 
               size="lg" 
-              className="bg-aithos-blue hover:bg-aithos-blue/90 text-primary-foreground button-bounce button-glow"
+              className="bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-primary-foreground button-bounce button-glow"
               asChild
             >
-              <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
+              <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black">
                 Book Demo Call
                 <ArrowRight size={16} />
               </a>
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-aithos-blue/30 hover:bg-aithos-blue/10 button-bounce"
+              className="border-[#FEF7CD]/30 hover:bg-[#FEF7CD]/10 button-bounce"
               asChild
             >
               <a href="#services">

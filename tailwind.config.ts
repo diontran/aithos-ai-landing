@@ -29,10 +29,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				aithos: {
+					accent: '#FEF7CD',
+					blue: '#FEF7CD',
+				},
 				red: {
-					DEFAULT: '#e53e3e',
-					dark: '#b91c1c',
-					light: '#f56565',
+					DEFAULT: '#FEF7CD',
+					dark: '#e2dab8',
+					light: '#fffde6',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

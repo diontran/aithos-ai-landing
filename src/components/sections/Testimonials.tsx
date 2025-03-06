@@ -82,7 +82,7 @@ const Testimonials: React.FC = () => {
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? 'bg-aithos-accent scale-125' : 'bg-muted-foreground/30'
+                  index === activeIndex ? 'bg-[#FEF7CD] scale-125' : 'bg-muted-foreground/30'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

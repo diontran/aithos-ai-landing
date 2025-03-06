@@ -22,7 +22,7 @@ const CTASection: React.FC = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-aithos-blue hover:bg-aithos-blue/90 text-primary-foreground px-8 button-bounce button-glow"
+            className="bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-black px-8 button-bounce button-glow"
             asChild
           >
             <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
