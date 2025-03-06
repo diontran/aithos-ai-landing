@@ -6,25 +6,17 @@ import { User } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Alex Chen',
+    name: 'Dion Tran',
     position: 'CEO',
     bio: 'AI visionary with 10+ years of experience in machine learning and business automation.',
+    image: '/lovable-uploads/70d6fe89-e567-415e-9977-1781aa6b38e3.png'
   },
   {
-    name: 'Sarah Johnson',
+    name: 'Timmy Leung',
     position: 'CTO',
     bio: 'Machine learning specialist with a background in developing enterprise AI solutions.',
-  },
-  {
-    name: 'Michael Rodriguez',
-    position: 'Head of AI Development',
-    bio: 'Expert in natural language processing and conversational AI technologies.',
-  },
-  {
-    name: 'Priya Patel',
-    position: 'Client Success Manager',
-    bio: 'Dedicated to ensuring clients achieve maximum ROI from their AI implementations.',
-  },
+    image: null
+  }
 ];
 
 const Team: React.FC = () => {
@@ -44,7 +36,7 @@ const Team: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
             <div 
               key={index}
@@ -53,11 +45,21 @@ const Team: React.FC = () => {
             >
               <Card className="glass-card overflow-hidden h-full transition-all duration-300 hover:border-aithos-blue/50 hover-float group">
                 <CardContent className="p-0">
-                  <div className="bg-gradient-to-br from-aithos-blue/20 to-aithos-accent/10 aspect-square flex items-center justify-center">
-                    <div className="rounded-full bg-aithos-blue/30 p-6">
-                      <User className="w-12 h-12 text-aithos-accent" />
+                  {member.image ? (
+                    <div className="aspect-square">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover object-center"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="bg-gradient-to-br from-aithos-blue/20 to-aithos-accent/10 aspect-square flex items-center justify-center">
+                      <div className="rounded-full bg-aithos-blue/30 p-6">
+                        <User className="w-12 h-12 text-aithos-accent" />
+                      </div>
+                    </div>
+                  )}
                   <div className="p-5">
                     <p className="text-sm text-aithos-accent mb-1">{member.position}</p>
                     <h3 className="text-xl font-bold mb-2">{member.name}</h3>
