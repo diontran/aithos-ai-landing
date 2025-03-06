@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Aithos AI Landing Page Read me
 
 ## Project info
 
