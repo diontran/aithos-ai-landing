@@ -14,7 +14,7 @@ const services = [
   },
   {
     title: 'Saas Programs AI Production',
-    description: "Produce and deploy simple and ready to use custom Saas that your business can use to optimise any part of your work, be that a program that helps review documents amd much more.",
+    description: "Produce and deploy simple and ready to use custom Saas that your business can use to optimise any part of your work, be that a program that helps review documents, call data, and much more.",
     icon: <FileText className="w-6 h-6" />,
     delay: 0.2,
   },

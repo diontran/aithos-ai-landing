@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="gradient-text">AithosAI</span>
             </a>
             <p className="text-muted-foreground mb-6">
-              AI automation solutions that save time and drive business growth.
+              AI automation solutions that save time and accelerate business growth.
             </p>
             <div className="flex gap-4">
               <a 
