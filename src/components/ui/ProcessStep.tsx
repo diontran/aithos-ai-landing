@@ -20,13 +20,13 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({
   return (
     <div 
       className={cn(
-        "glass-card p-6 rounded-xl relative overflow-hidden h-full transition-all duration-300 hover:border-red-400/50 hover-float",
+        "glass-card p-6 rounded-xl relative overflow-hidden h-full transition-all duration-300 hover:border-[#FEF7CD]/50 hover-float",
         className
       )}
     >
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0">
-          <div className="w-12 h-12 bg-red-600/20 flex items-center justify-center rounded-lg text-accent font-bold text-xl">
+          <div className="w-12 h-12 bg-[#FEF7CD]/20 flex items-center justify-center rounded-lg text-accent font-bold text-xl">
             {number}
           </div>
         </div>

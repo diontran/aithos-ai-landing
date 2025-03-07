@@ -20,11 +20,11 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <Card className={cn(
-      "glass-card overflow-hidden group h-full transition-all duration-300 hover:border-red-400/50 hover-float",
+      "glass-card overflow-hidden group h-full transition-all duration-300 hover:border-[#FEF7CD]/50 hover-float",
       className
     )}>
       <CardHeader className="p-6 pb-0">
-        <div className="w-12 h-12 rounded-lg bg-red-600/20 flex items-center justify-center mb-4 text-accent group-hover:bg-red-600/30 transition-colors">
+        <div className="w-12 h-12 rounded-lg bg-[#FEF7CD]/20 flex items-center justify-center mb-4 text-accent group-hover:bg-[#FEF7CD]/30 transition-colors">
           {icon}
         </div>
         <h3 className="text-2xl font-bold tracking-tight">{title}</h3>

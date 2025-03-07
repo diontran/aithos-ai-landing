@@ -22,14 +22,14 @@ export const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
     <Card 
       className={cn(
         "glass-card overflow-hidden h-full transition-all duration-300 group cursor-pointer hover-float",
-        isActive && "border-red-400/50",
+        isActive && "border-[#FEF7CD]/50",
         className
       )}
     >
       <CardHeader className="p-6 pb-0">
         <div className="w-32 max-w-full">
           <div className={cn(
-            "h-1 bg-gradient-to-r from-red-600 to-accent mb-4",
+            "h-1 bg-gradient-to-r from-[#FEF7CD] to-accent mb-4",
             isActive ? "w-full" : "w-16 group-hover:w-full transition-all duration-500"
           )} />
           <h3 className="text-2xl font-bold">{industry}</h3>

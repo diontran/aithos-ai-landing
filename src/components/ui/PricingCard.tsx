@@ -35,12 +35,12 @@ export const PricingCard: React.FC<PricingCardProps> = ({
     <Card 
       className={cn(
         "glass-card overflow-hidden transition-all duration-300 relative hover-float",
-        popular ? "border-red-500 z-10" : "hover:border-red-400/50",
+        popular ? "border-[#FEF7CD] z-10" : "hover:border-[#FEF7CD]/50",
         className
       )}
     >
       {popular && (
-        <div className="absolute top-0 left-0 w-full bg-red-600 text-center py-1 text-xs font-medium">
+        <div className="absolute top-0 left-0 w-full bg-[#FEF7CD] text-center py-1 text-xs font-medium text-black">
           MOST POPULAR
         </div>
       )}
@@ -77,8 +77,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
           className={cn(
             "w-full button-bounce button-glow",
             popular 
-              ? "bg-red-600 hover:bg-red-600/90 text-primary-foreground" 
-              : "bg-secondary hover:bg-red-600/20"
+              ? "bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-black" 
+              : "bg-secondary hover:bg-[#FEF7CD]/20"
           )}
         >
           {ctaText}
