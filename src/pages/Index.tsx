@@ -9,7 +9,6 @@ import Team from '@/components/sections/Team';
 import Pricing from '@/components/sections/Pricing';
 import CTASection from '@/components/sections/CTASection';
 import Footer from '@/components/layout/Footer';
-import Chatbot from '@/components/sections/Chatbot';
 
 // Add the ElevenLabs Voice AI Widget component
 const VoiceAIWidget = () => {
@@ -47,7 +46,6 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
-      <Chatbot />
       <VoiceAIWidget />
     </div>
   );
