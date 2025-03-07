@@ -8,17 +8,17 @@ const teamMembers = [
   {
     name: 'Dion Tran',
     position: 'CEO',
-    bio: 'AI visionary with 10+ years of experience in machine learning and business automation.',
+    bio: 'AI visionary Data Scientist specialising in machine learning and business automation.',
     socials: {
-      linkedin: 'https://linkedin.com',
+      linkedin: 'https://www.linkedin.com/in/dion-tran-8120221b3/',
       twitter: 'https://twitter.com',
-      email: 'mailto:contact@example.com'
+      email: 'dion.doanh.tran@gmail.com'
     }
   },
   {
     name: 'Timmy Leung',
     position: 'CTO',
-    bio: 'Machine learning specialist with a background in developing enterprise AI solutions.',
+    bio: 'Software Engineer Expert in building scalable and efficient systems.',
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
