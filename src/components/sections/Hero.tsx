@@ -1,44 +1,76 @@
-
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number>();
+  const lastMoveRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   
-  // Animation effect for tracking mouse movement
+  // Optimized animation effect for tracking mouse movement
+  const updateBlobPositions = useCallback((x: number, y: number) => {
+    if (!heroRef.current) return;
+    
+    const rect = heroRef.current.getBoundingClientRect();
+    const xPercent = x / rect.width;
+    const yPercent = y / rect.height;
+    
+    // Calculate movement effect (subtle parallax)
+    const moveX = (xPercent - 0.5) * 20;
+    const moveY = (yPercent - 0.5) * 20;
+    
+    // Apply to blob positions
+    const blobs = heroRef.current.querySelectorAll('.blur-blob');
+    blobs.forEach((blob) => {
+      const element = blob as HTMLElement;
+      const speedFactor = element.dataset.speed ? parseFloat(element.dataset.speed) : 1;
+      element.style.transform = `translate(${moveX * speedFactor}px, ${moveY * speedFactor}px) rotate(${element.dataset.rotation || '0deg'})`;
+    });
+  }, []);
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!heroRef.current) return;
-      
+
       const { clientX, clientY } = e;
       const rect = heroRef.current.getBoundingClientRect();
-      const x = clientX - rect.left; // x position within the element
-      const y = clientY - rect.top; // y position within the element
-      
-      const xPercent = x / rect.width;
-      const yPercent = y / rect.height;
-      
-      // Calculate movement effect (subtle parallax)
-      const moveX = (xPercent - 0.5) * 20; // -10px to 10px movement
-      const moveY = (yPercent - 0.5) * 20; // -10px to 10px movement
-      
-      // Apply to blob positions
-      const blobs = heroRef.current.querySelectorAll('.blur-blob');
-      blobs.forEach((blob) => {
-        const element = blob as HTMLElement;
-        const speedFactor = element.dataset.speed ? parseFloat(element.dataset.speed) : 1;
-        element.style.transform = `translate(${moveX * speedFactor}px, ${moveY * speedFactor}px) rotate(${element.dataset.rotation || '0deg'})`;
-      });
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+
+      // Only update if mouse has moved significantly (more than 5 pixels)
+      const dx = Math.abs(x - lastMoveRef.current.x);
+      const dy = Math.abs(y - lastMoveRef.current.y);
+      if (dx < 5 && dy < 5) return;
+
+      lastMoveRef.current = { x, y };
+
+      // Use requestAnimationFrame for smooth animation
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+      rafRef.current = requestAnimationFrame(() => updateBlobPositions(x, y));
     };
-    
-    window.addEventListener('mousemove', handleMouseMove);
+
+    const debouncedHandleMouseMove = debounce(handleMouseMove, 16); // ~60fps
+    window.addEventListener('mousemove', debouncedHandleMouseMove);
     
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousemove', debouncedHandleMouseMove);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
-  }, []);
+  }, [updateBlobPositions]);
+
+  // Debounce utility function
+  function debounce(fn: Function, ms: number) {
+    let timer: NodeJS.Timeout;
+    return (...args: any[]) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), ms);
+    };
+  }
 
   return (
     <section ref={heroRef} className="min-h-screen relative flex items-center overflow-hidden pt-20">
