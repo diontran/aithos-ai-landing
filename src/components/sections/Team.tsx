@@ -9,7 +9,7 @@ const teamMembers = [
     name: 'Dion Tran',
     position: 'CEO',
     bio: 'AI visionary with 10+ years of experience in machine learning and business automation.',
-    image: '/lovable-uploads/70d6fe89-e567-415e-9977-1781aa6b38e3.png'
+    image: '/placeholder.svg'
   },
   {
     name: 'Timmy Leung',
