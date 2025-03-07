@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 interface BlurBlobProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'red' | 'accent';
+  color?: 'accent';
   delay?: number;
 }
 
@@ -17,14 +17,13 @@ const sizes = {
 };
 
 const colors = {
-  red: 'bg-red-600/20',
   accent: 'bg-accent/20',
 };
 
 export const BlurBlob: React.FC<BlurBlobProps> = ({
   className,
   size = 'md',
-  color = 'red',
+  color = 'accent',
   delay = 0,
 }) => {
   return (

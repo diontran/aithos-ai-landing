@@ -43,7 +43,7 @@ const Team: React.FC = () => {
               className="animate-fade-in-up opacity-0"
               style={{ animationDelay: `${0.1 + index * 0.1}s` }}
             >
-              <Card className="glass-card overflow-hidden h-full transition-all duration-300 hover:border-red-400/50 hover-float group">
+              <Card className="glass-card overflow-hidden h-full transition-all duration-300 hover:border-accent/50 hover-float group">
                 <CardContent className="p-0">
                   {member.image ? (
                     <div className="aspect-square">
@@ -54,8 +54,8 @@ const Team: React.FC = () => {
                       />
                     </div>
                   ) : (
-                    <div className="bg-gradient-to-br from-red-600/20 to-accent/10 aspect-square flex items-center justify-center">
-                      <div className="rounded-full bg-red-600/30 p-6">
+                    <div className="bg-gradient-to-br from-accent/20 to-accent/10 aspect-square flex items-center justify-center">
+                      <div className="rounded-full bg-accent/30 p-6">
                         <User className="w-12 h-12 text-accent" />
                       </div>
                     </div>
