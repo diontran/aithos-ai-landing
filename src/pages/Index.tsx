@@ -1,7 +1,9 @@
+
 import React, { lazy, Suspense } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
 import Footer from '@/components/layout/Footer';
+import Chatbot from '@/components/sections/Chatbot';
 
 // Lazy load components that are not immediately visible
 const Services = lazy(() => import('@/components/sections/Services'));
@@ -74,6 +76,7 @@ const Index = () => {
       </main>
       <Footer />
       <VoiceAIWidget />
+      <Chatbot />
     </div>
   );
 };
