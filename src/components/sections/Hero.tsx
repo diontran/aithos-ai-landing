@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
               asChild
             >
               <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black">
-                Book Victorian AI Consultation
+                Book FREE AI Consultation
                 <ArrowRight size={16} />
               </a>
             </Button>

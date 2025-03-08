@@ -18,7 +18,7 @@ const CTASection: React.FC = () => {
             Ready to <span className="gradient-text">transform</span> your Victorian business?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join leading Victorian companies already using our AI solutions. Book a free demo call and see how AI can boost your business today.
+            Join leading Victorian companies already using our AI solutions. Book your free consultation call today and discover how AI can boost your business.
           </p>
           <Button 
             size="lg" 
@@ -26,7 +26,7 @@ const CTASection: React.FC = () => {
             asChild
           >
             <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
-              Book Victoria AI consultation
+              Book FREE AI consultation
               <ArrowRight size={16} />
             </a>
           </Button>
