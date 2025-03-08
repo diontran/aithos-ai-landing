@@ -62,7 +62,7 @@ export const Navbar = () => {
             asChild
           >
             <a href="https://zcal.co/diontran/30min">
-              Book Demo Call
+              Book FREE Consultation Call
               <ArrowRight size={16} />
             </a>
           </Button>
@@ -105,7 +105,7 @@ export const Navbar = () => {
                 asChild
               >
                 <a href="https://zcal.co/diontran/30min">
-                  Book Demo Call
+                  Book FREE Consultation Call
                   <ArrowRight size={16} />
                 </a>
               </Button>
