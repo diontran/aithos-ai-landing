@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -9,7 +8,6 @@ const Hero: React.FC = () => {
   const rafRef = useRef<number>();
   const lastMoveRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   
-  // Optimized animation effect for tracking mouse movement
   const updateBlobPositions = useCallback((x: number, y: number) => {
     if (!heroRef.current) return;
     
@@ -17,11 +15,9 @@ const Hero: React.FC = () => {
     const xPercent = x / rect.width;
     const yPercent = y / rect.height;
     
-    // Calculate movement effect (subtle parallax)
     const moveX = (xPercent - 0.5) * 20;
     const moveY = (yPercent - 0.5) * 20;
     
-    // Apply to blob positions
     const blobs = heroRef.current.querySelectorAll('.blur-blob');
     blobs.forEach((blob) => {
       const element = blob as HTMLElement;
@@ -39,21 +35,19 @@ const Hero: React.FC = () => {
       const x = clientX - rect.left;
       const y = clientY - rect.top;
 
-      // Only update if mouse has moved significantly (more than 5 pixels)
       const dx = Math.abs(x - lastMoveRef.current.x);
       const dy = Math.abs(y - lastMoveRef.current.y);
       if (dx < 5 && dy < 5) return;
 
       lastMoveRef.current = { x, y };
 
-      // Use requestAnimationFrame for smooth animation
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
       }
       rafRef.current = requestAnimationFrame(() => updateBlobPositions(x, y));
     };
 
-    const debouncedHandleMouseMove = debounce(handleMouseMove, 16); // ~60fps
+    const debouncedHandleMouseMove = debounce(handleMouseMove, 16);
     window.addEventListener('mousemove', debouncedHandleMouseMove);
     
     return () => {
@@ -64,7 +58,6 @@ const Hero: React.FC = () => {
     };
   }, [updateBlobPositions]);
 
-  // Debounce utility function
   function debounce(fn: Function, ms: number) {
     let timer: NodeJS.Timeout;
     return (...args: any[]) => {
@@ -75,7 +68,6 @@ const Hero: React.FC = () => {
 
   return (
     <section ref={heroRef} className="min-h-screen relative flex items-center overflow-hidden pt-20">
-      {/* Background blobs */}
       <BlurBlob 
         size="xl" 
         className="left-[10%] top-[15%] opacity-40"
@@ -94,16 +86,16 @@ const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
             <span className="text-sm font-medium text-foreground">
-              Victoria's Leading AI Automation Specialists
+              Leading AI Automation Specialists
             </span>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text">
-            Aithos AI Victoria
+            Aithos AI
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Transforming Victorian businesses with AI automation solutions that save time, reduce costs, and drive growth.
+            Transforming businesses with AI automation solutions that save time, reduce costs, and drive growth.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -125,7 +117,7 @@ const Hero: React.FC = () => {
               asChild
             >
               <a href="#services">
-                Victoria AI Services
+                Explore AI Services
               </a>
             </Button>
           </div>

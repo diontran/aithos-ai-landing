@@ -15,10 +15,10 @@ const CTASection: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="glass-card rounded-xl p-12 md:p-16 text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to <span className="gradient-text">transform</span> your Victorian business?
+            Ready to <span className="gradient-text">transform</span> your business?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join leading Victorian companies already using our AI solutions. Book your free consultation call today and discover how AI can boost your business.
+            Join leading companies already using our AI solutions. Book your free consultation call today and discover how AI can boost your business.
           </p>
           <Button 
             size="lg" 
