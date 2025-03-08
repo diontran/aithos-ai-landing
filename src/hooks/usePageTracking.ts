@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { trackPageView } from "@/lib/analytics";
+import { analytics } from "@/lib/analytics";
 
 export const usePageTracking = (): void => {
   // Use try-catch to prevent errors if used outside Router context
@@ -9,7 +9,7 @@ export const usePageTracking = (): void => {
     const location = useLocation();
     
     useEffect(() => {
-      trackPageView(location.pathname);
+      analytics.trackPageView(location.pathname);
     }, [location]);
   } catch (error) {
     console.warn('usePageTracking must be used within a Router context');
