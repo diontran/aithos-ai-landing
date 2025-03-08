@@ -5,34 +5,34 @@ import BlurBlob from '@/components/ui/BlurBlob';
 
 const caseStudies = [
   {
-    industry: 'Online Coaches',
-    problem: 'Repetitive questions about schedules and pricing eat into your coaching time.',
-    solution: 'A 24/7 chatbot that answers inquiries, manages bookings, and even supports coaching.',
+    industry: 'Melbourne Online Coaches',
+    problem: 'Victorian coaches losing time answering repetitive questions about schedules and pricing.',
+    solution: 'A 24/7 AI chatbot that answers inquiries, manages bookings, and supports coaching for Victorian clients.',
   },
   {
-    industry: 'E-Commerce',
-    problem: 'Cart abandonment spikes when product questions go unanswered.',
-    solution: 'An AI chatbot that recommends products, and streamlines the checkout process.',
+    industry: 'Victorian E-Commerce',
+    problem: 'Melbourne-based online stores experiencing high cart abandonment when customer questions go unanswered.',
+    solution: 'An AI chatbot that recommends products and streamlines checkout for Victorian shoppers.',
   },
   {
-    industry: 'Sales',
-    problem: 'Delayed follow-ups result in missed sales opportunities.',
-    solution: 'An AI chatbot that instantly qualifies leads, schedules demos, and answers questions.',
+    industry: 'Victoria Sales Teams',
+    problem: 'Sales teams across Victoria struggling with delayed follow-ups resulting in missed opportunities.',
+    solution: 'An AI assistant that instantly qualifies leads, schedules demos, and answers questions about Victorian markets.',
   },
   {
-    industry: 'Real Estate Agencies',
-    problem: 'Lost leads due to inquiries outside business hours.',
-    solution: 'A chatbot that shares property details, schedules viewings, and follows up with leads 24/7.',
+    industry: 'Melbourne Real Estate',
+    problem: 'Victorian real estate agencies losing leads due to inquiries outside business hours.',
+    solution: 'A property-specific chatbot that shares details, schedules viewings, and follows up with Melbourne property seekers 24/7.',
   },
   {
-    industry: 'Health Sector',
-    problem: 'Repetitive patient inquiries and time-consuming administrative tasks.',
-    solution: 'A chatbot that answers patient questions and manages bookings seamlessly.',
+    industry: 'Victorian Healthcare',
+    problem: 'Medical practices in Victoria overwhelmed with repetitive patient inquiries and administrative tasks.',
+    solution: 'A healthcare AI assistant that answers patient questions and manages bookings for Victorian patients.',
   },
   {
-    industry: 'Restaurants',
-    problem: 'Restaurants lose time answering repetitive calls about menus and reservations.',
-    solution: 'A chatbot that manages menu inquiries, takes reservations, and handles table bookings.',
+    industry: 'Melbourne Restaurants',
+    problem: 'Restaurants across Melbourne losing time answering repetitive calls about menus and reservations.',
+    solution: 'A restaurant-specific AI chatbot that manages menu inquiries and handles table bookings for Melbourne diners.',
   },
 ];
 
@@ -48,9 +48,9 @@ const CaseStudies: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="section-heading">Case studies</h2>
+          <h2 className="section-heading">Victorian AI Success Stories</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See how AI solutions have transformed businesses across different industries.
+            See how our AI solutions have transformed businesses across different industries in Victoria.
           </p>
         </div>
         
@@ -74,13 +74,13 @@ const CaseStudies: React.FC = () => {
         
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            Ready to see how Aithos AI can transform your business?
+            Ready to see how Aithos AI can transform your Victorian business?
           </p>
           <a 
             href="#contact" 
             className="inline-block mt-4 text-aithos-accent hover:underline"
           >
-            Contact us for a personalized case study
+            Contact us for a personalized Victoria AI case study
           </a>
         </div>
       </div>

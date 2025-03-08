@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -93,16 +94,16 @@ const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
             <span className="text-sm font-medium text-foreground">
-              AI Automation for Modern Businesses
+              Victoria's Leading AI Automation Specialists
             </span>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text">
-            Aithos AI.
+            Aithos AI Victoria
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Make your business a profit powerhouse with AI automation solutions that save time and drive growth.
+            Transforming Victorian businesses with AI automation solutions that save time, reduce costs, and drive growth.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -112,7 +113,7 @@ const Hero: React.FC = () => {
               asChild
             >
               <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black">
-                Book Demo Call
+                Book Victorian AI Consultation
                 <ArrowRight size={16} />
               </a>
             </Button>
@@ -124,7 +125,7 @@ const Hero: React.FC = () => {
               asChild
             >
               <a href="#services">
-                Our Services
+                Victoria AI Services
               </a>
             </Button>
           </div>

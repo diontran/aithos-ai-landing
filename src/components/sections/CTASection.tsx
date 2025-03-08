@@ -15,10 +15,10 @@ const CTASection: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="glass-card rounded-xl p-12 md:p-16 text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to <span className="gradient-text">elevate</span> your business?
+            Ready to <span className="gradient-text">transform</span> your Victorian business?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Jump on a free demo call and see how our AI solutions can boost your business today.
+            Join leading Victorian companies already using our AI solutions. Book a free demo call and see how AI can boost your business today.
           </p>
           <Button 
             size="lg" 
@@ -26,7 +26,7 @@ const CTASection: React.FC = () => {
             asChild
           >
             <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
-              Book demo call
+              Book Victoria AI consultation
               <ArrowRight size={16} />
             </a>
           </Button>
