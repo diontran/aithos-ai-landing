@@ -42,6 +42,7 @@ const VoiceAIWidget = React.memo(() => {
 
   if (!isScriptLoaded) return null;
 
+  // Using the custom element with proper JSX typing
   return (
     <div className="fixed bottom-24 right-4 z-50">
       <elevenlabs-convai agent-id="Ooy8o6qQnnjoVMK8aTvZ"></elevenlabs-convai>
