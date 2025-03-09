@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
+
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number>();
@@ -12,6 +13,7 @@ const Hero: React.FC = () => {
     x: 0,
     y: 0
   });
+
   const updateBlobPositions = useCallback((x: number, y: number) => {
     if (!heroRef.current) return;
     const rect = heroRef.current.getBoundingClientRect();
@@ -26,6 +28,7 @@ const Hero: React.FC = () => {
       element.style.transform = `translate(${moveX * speedFactor}px, ${moveY * speedFactor}px) rotate(${element.dataset.rotation || '0deg'})`;
     });
   }, []);
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!heroRef.current) return;
@@ -57,6 +60,7 @@ const Hero: React.FC = () => {
       }
     };
   }, [updateBlobPositions]);
+
   function debounce(fn: Function, ms: number) {
     let timer: NodeJS.Timeout;
     return (...args: any[]) => {
@@ -64,6 +68,7 @@ const Hero: React.FC = () => {
       timer = setTimeout(() => fn.apply(this, args), ms);
     };
   }
+
   return <section ref={heroRef} className="min-h-screen relative flex items-center overflow-hidden pt-20">
       <BlurBlob size="xl" className="left-[10%] top-[15%] opacity-40" data-speed="1.5" data-rotation="0deg" />
       <BlurBlob size="lg" color="accent" className="right-[15%] bottom-[20%] opacity-30" data-speed="1" data-rotation="45deg" />
@@ -72,7 +77,7 @@ const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
             <span className="text-sm font-medium text-foreground">
-              Leading AI Automation Specialists
+              Highest Rated AI Agency
             </span>
           </div>
           
@@ -82,7 +87,7 @@ const Hero: React.FC = () => {
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>Transforming businesses with AI automation, information and solutions that save time, reduce costs, and drive growth.</p>
+        }}>Award-winning AI solutions that transform businesses through intelligent automation, saving time, reducing costs, and driving measurable growth.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{
           animationDelay: '0.3s'
@@ -104,4 +109,5 @@ const Hero: React.FC = () => {
       </div>
     </section>;
 };
+
 export default Hero;

@@ -7,26 +7,26 @@ import { cn } from '@/lib/utils';
 
 const services = [
   {
-    title: 'Custom AI Chatbot Development',
-    description: 'Intelligent chatbots trained specifically for your business to answer client queries, recommend products, book appointments, and capture leads 24/7.',
+    title: 'Award-Winning AI Chatbot Development',
+    description: 'Intelligent chatbots built by our expert team to answer client queries, recommend products, book appointments, and capture leads 24/7.',
     icon: <MessageSquare className="w-6 h-6" />,
     delay: 0.1,
   },
   {
-    title: 'SaaS AI Solutions',
-    description: "Custom software solutions that leverage AI to review documents, analyze call data, and streamline operations tailored to your market needs.",
+    title: 'Custom SaaS AI Solutions',
+    description: "Tailored software solutions that leverage cutting-edge AI to review documents, analyze data, and streamline operations for measurable business results.",
     icon: <FileText className="w-6 h-6" />,
     delay: 0.2,
   },
   {
-    title: 'Business AI Workflow Automation',
-    description: 'Streamline repetitive tasks with AI automation that saves time, enhances efficiency, and eliminates errors in your daily operations.',
+    title: 'Premium AI Workflow Automation',
+    description: 'Eliminate repetitive tasks with our top-rated AI automation services that save time, enhance efficiency, and reduce errors in daily operations.',
     icon: <Workflow className="w-6 h-6" />,
     delay: 0.3,
   },
   {
-    title: 'AI Strategy Consulting',
-    description: 'Strategic AI guidance to implement solutions that drive growth in your specific market context and business environment.',
+    title: 'Strategic AI Consulting',
+    description: 'Expert AI guidance from the highest-rated AI agency to implement solutions that drive growth and provide competitive advantages.',
     icon: <LineChart className="w-6 h-6" />,
     delay: 0.4,
   },
@@ -42,9 +42,9 @@ const Services: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="section-heading">AI Services</h2>
+          <h2 className="section-heading">Top-Rated AI Services</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our AI-powered services transform how businesses operate, automate tasks, and engage with customers.
+            Our award-winning AI-powered services transform how businesses operate, automate tasks, and engage with customers.
           </p>
         </div>
         
@@ -70,9 +70,9 @@ const Services: React.FC = () => {
               100<span className="text-aithos-accent">+</span>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-2">AI Automations for Your Business</h3>
+              <h3 className="text-2xl font-semibold mb-2">Premium AI Solutions for Your Business</h3>
               <p className="text-muted-foreground">
-                We offer over 100 pre-built AI automations that can be customized for your specific business needs. Our solutions integrate with all major platforms and tools.
+                We offer over 100 expertly crafted AI automations that can be customized for your specific business needs. Our solutions integrate with all major platforms and tools.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 {['Gmail', 'Slack', 'Notion', 'Zapier', 'Trello', 'GitHub', 'Airtable', 'Google Workspace'].map((tool, i) => (
