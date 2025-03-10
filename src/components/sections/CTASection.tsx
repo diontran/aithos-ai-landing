@@ -21,25 +21,25 @@ const CTASection: React.FC = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get Your <span className="gradient-text">FREE AI Strategy Session</span> Today
+            <span className="gradient-text">FREE AI STRATEGY CALL</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Our expert team will identify specific automation opportunities that can <span className="font-bold text-white">save you hours every week</span>.
+          <p className="text-xl text-white font-bold mb-6 max-w-2xl mx-auto">
+            SAVE HOURS WEEKLY WITH AI AUTOMATION.
           </p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center mb-8">
             <div className="flex items-center gap-2 text-lg">
               <CheckCircle className="text-green-500" size={24} />
-              <span>Custom AI Roadmap</span>
+              <span>Custom AI Plan</span>
             </div>
             <div className="flex items-center gap-2 text-lg">
               <CheckCircle className="text-green-500" size={24} />
-              <span>Time-Saving Automation</span>
+              <span>Save Time</span>
             </div>
             <div className="flex items-center gap-2 text-lg">
               <CheckCircle className="text-green-500" size={24} />
-              <span>Expert AI Guidance</span>
+              <span>Expert Guidance</span>
             </div>
           </div>
           
@@ -50,7 +50,7 @@ const CTASection: React.FC = () => {
           >
             <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
               <GraduationCap size={16} className="mr-1" />
-              <span className="font-bold">👉</span> BOOK FREE 30-MIN STRATEGY CALL <span className="font-bold">👈</span>
+              <span className="font-bold">👉</span> BOOK FREE CALL <span className="font-bold">👈</span>
               <ArrowRight size={16} />
             </a>
           </Button>

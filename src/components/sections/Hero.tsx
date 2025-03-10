@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
           {/* Free Strategy Badge */}
           <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
             <span className="text-sm font-bold text-foreground">
-              <span className="text-green-500">FREE</span> 30-MIN AI STRATEGY SESSION
+              <span className="text-green-500">FREE</span> AI STRATEGY CALL
             </span>
           </div>
           
@@ -87,19 +87,19 @@ const Hero: React.FC = () => {
             Aithos AI
           </h1>
           
-          {/* Extremely Clear Value Proposition */}
+          {/* Super Clear Value Proposition */}
           <div className="glass-card p-6 mb-8 rounded-xl border-2 border-[#FEF7CD] animate-pulse-slow">
             <h2 className="text-2xl md:text-3xl font-bold mb-3 text-white">
-              FREE AI Audit & Strategy Session
+              FREE AI AUDIT
             </h2>
-            <p className="text-xl md:text-2xl text-foreground/90 font-medium">
-              Get a <span className="font-bold underline text-[#FEF7CD]">FREE 30-minute AI strategy call</span> where we identify automation opportunities that can <span className="font-bold text-[#FEF7CD]">save you hours every week.</span>
+            <p className="text-xl md:text-2xl text-foreground/90 font-bold">
+              <span className="text-[#FEF7CD]">30-MIN CALL. SAVE HOURS WEEKLY.</span>
             </p>
           </div>
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>Book your no-obligation consultation with Australia's highest-rated AI agency. Get expert guidance on intelligent automation without paying a cent.</p>
+        }}>Australia's highest-rated AI agency. Free expert guidance.</p>
           
           {/* Key Benefits */}
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
         }}>
             <Button size="lg" className="bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-primary-foreground button-bounce button-glow" asChild>
               <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black">
-                <span className="font-bold">👉</span> Book FREE Strategy Session <span className="font-bold">👈</span>
+                <span className="font-bold">👉</span> BOOK FREE CALL <span className="font-bold">👈</span>
                 <ArrowRight size={16} />
               </a>
             </Button>
@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
             <Button size="lg" variant="outline" className="border-[#FEF7CD]/30 hover:bg-[#FEF7CD]/10 button-bounce" asChild>
               <a href="#services" className="flex items-center gap-2">
                 <GraduationCap size={16} />
-                Learn About AI Services
+                Learn More
               </a>
             </Button>
           </div>
