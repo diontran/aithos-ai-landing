@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>Australia's fastest-growing AI agency. Free expert guidance.</p>
+        }}>Your competitors are already using AI—are you?</p>
           
           {/* Key Benefits */}
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
@@ -112,7 +112,6 @@ const Hero: React.FC = () => {
             <Button size="lg" className="bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-primary-foreground button-bounce button-glow" asChild>
               <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black">
                 <span className="font-bold">👉</span> BOOK FREE CALL <span className="font-bold">👈</span>
-                <ArrowRight size={16} />
               </a>
             </Button>
             
