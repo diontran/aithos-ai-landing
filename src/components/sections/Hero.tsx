@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
           {/* Free Strategy Badge */}
           <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
             <span className="text-sm font-bold text-foreground">
-              <span className="text-green-500">FREE</span> AI STRATEGY CALL
+              <span className="text-green-500">EXPLODE</span> YOUR BUSINESS
             </span>
           </div>
           
