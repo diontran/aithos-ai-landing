@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>Australia's highest-rated AI agency. Free expert guidance.</p>
+        }}>Australia's fastest-growing AI agency. Free expert guidance.</p>
           
           {/* Key Benefits */}
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
