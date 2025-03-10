@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, GraduationCap, Clock, CheckCircle } from 'lucide-react';
@@ -86,16 +85,6 @@ const Hero: React.FC = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text">
             Aithos AI
           </h1>
-          
-          {/* Super Clear Value Proposition */}
-          <div className="glass-card p-6 mb-8 rounded-xl border-2 border-[#FEF7CD] animate-pulse-slow">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-white">
-              FREE AI AUDIT
-            </h2>
-            <p className="text-xl md:text-2xl text-foreground/90 font-bold">
-              <span className="text-[#FEF7CD]">30-MIN CALL. SAVE HOURS WEEKLY.</span>
-            </p>
-          </div>
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
           animationDelay: '0.2s'
