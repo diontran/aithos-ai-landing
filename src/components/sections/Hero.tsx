@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, GraduationCap } from 'lucide-react';
+import { ArrowRight, GraduationCap, Clock, CheckCircle } from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
 
 const Hero: React.FC = () => {
@@ -76,9 +76,10 @@ const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Free Strategy Badge */}
           <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
-            <span className="text-sm font-medium text-foreground">
-              Free AI Consultation & Education
+            <span className="text-sm font-bold text-foreground">
+              <span className="text-green-500">FREE</span> 30-MIN AI STRATEGY SESSION
             </span>
           </div>
           
@@ -86,16 +87,42 @@ const Hero: React.FC = () => {
             Aithos AI
           </h1>
           
+          {/* Extremely Clear Value Proposition */}
+          <div className="glass-card p-6 mb-8 rounded-xl border-2 border-[#FEF7CD] animate-pulse-slow">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-white">
+              FREE AI Audit & Strategy Session
+            </h2>
+            <p className="text-xl md:text-2xl text-foreground/90 font-medium">
+              Get a <span className="font-bold underline text-[#FEF7CD]">FREE 30-minute AI strategy call</span> where we identify automation opportunities that can <span className="font-bold text-[#FEF7CD]">save you hours every week.</span>
+            </p>
+          </div>
+          
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>Book your free AI consultation with Australia's highest-rated AI agency. Get expert education on how intelligent automation can save time, reduce costs, and drive growth.</p>
+        }}>Book your no-obligation consultation with Australia's highest-rated AI agency. Get expert guidance on intelligent automation without paying a cent.</p>
+          
+          {/* Key Benefits */}
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
+            <div className="flex items-center gap-2 text-lg">
+              <CheckCircle className="text-green-500" size={20} />
+              <span>Zero Cost</span>
+            </div>
+            <div className="flex items-center gap-2 text-lg">
+              <CheckCircle className="text-green-500" size={20} />
+              <span>No Obligation</span>
+            </div>
+            <div className="flex items-center gap-2 text-lg">
+              <CheckCircle className="text-green-500" size={20} />
+              <span>Pure Value</span>
+            </div>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{
           animationDelay: '0.3s'
         }}>
             <Button size="lg" className="bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-primary-foreground button-bounce button-glow" asChild>
               <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black">
-                Book FREE AI Consultation
+                <span className="font-bold">👉</span> Book FREE Strategy Session <span className="font-bold">👈</span>
                 <ArrowRight size={16} />
               </a>
             </Button>
