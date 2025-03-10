@@ -1,6 +1,7 @@
+
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, GraduationCap } from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
 
 const Hero: React.FC = () => {
@@ -77,7 +78,7 @@ const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
             <span className="text-sm font-medium text-foreground">
-              Highest Rated AI Agency
+              Free AI Consultation & Education
             </span>
           </div>
           
@@ -87,7 +88,7 @@ const Hero: React.FC = () => {
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>Award-winning AI solutions that transform businesses through intelligent automation, saving time, reducing costs, and driving measurable growth.</p>
+        }}>Book your free AI consultation with Australia's highest-rated AI agency. Get expert education on how intelligent automation can save time, reduce costs, and drive growth.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{
           animationDelay: '0.3s'
@@ -100,8 +101,9 @@ const Hero: React.FC = () => {
             </Button>
             
             <Button size="lg" variant="outline" className="border-[#FEF7CD]/30 hover:bg-[#FEF7CD]/10 button-bounce" asChild>
-              <a href="#services">
-                Explore AI Services
+              <a href="#services" className="flex items-center gap-2">
+                <GraduationCap size={16} />
+                Learn About AI Services
               </a>
             </Button>
           </div>

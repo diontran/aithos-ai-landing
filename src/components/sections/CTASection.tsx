@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, GraduationCap } from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
 
 const CTASection: React.FC = () => {
@@ -15,10 +15,10 @@ const CTASection: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="glass-card rounded-xl p-12 md:p-16 text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to work with the <span className="gradient-text">highest-rated</span> AI agency?
+            Get your <span className="gradient-text">free AI education</span> session today
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join leading companies already using our award-winning AI solutions. Book your free consultation call today and discover how our expert team can transform your business.
+            Our expert team provides personalized AI education and consultation at no cost. Learn how AI can transform your business operations and drive growth.
           </p>
           <Button 
             size="lg" 
@@ -26,7 +26,8 @@ const CTASection: React.FC = () => {
             asChild
           >
             <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2">
-              Book FREE AI Consultation
+              <GraduationCap size={16} className="mr-1" />
+              Book FREE AI Education Session
               <ArrowRight size={16} />
             </a>
           </Button>
