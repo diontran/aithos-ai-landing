@@ -1,33 +1,33 @@
 
 import React from 'react';
-import { MessageSquare, FileText, Workflow, LineChart } from 'lucide-react';
+import { MessageSquare, FileText, Workflow, LineChart, Megaphone } from 'lucide-react';
 import ServiceCard from '@/components/ui/ServiceCard';
 import BlurBlob from '@/components/ui/BlurBlob';
 import { cn } from '@/lib/utils';
 
 const services = [
   {
-    title: 'Award-Winning AI Chatbot Development',
-    description: 'Intelligent chatbots built by our expert team to answer client queries, recommend products, book appointments, and capture leads 24/7.',
-    icon: <MessageSquare className="w-6 h-6" />,
+    title: 'Voice Bot Development',
+    description: 'Melbourne\'s leading voice bot specialists creating natural-sounding voice assistants for customer service, sales, and support automation.',
+    icon: <Megaphone className="w-6 h-6" />,
     delay: 0.1,
   },
   {
-    title: 'Custom SaaS AI Solutions',
-    description: "Tailored software solutions that leverage cutting-edge AI to review documents, analyze data, and streamline operations for measurable business results.",
-    icon: <FileText className="w-6 h-6" />,
+    title: 'AI Chatbot Development',
+    description: 'Intelligent chatbots built by Melbourne\'s top AI agency to answer queries, recommend products, book appointments, and capture leads 24/7.',
+    icon: <MessageSquare className="w-6 h-6" />,
     delay: 0.2,
   },
   {
-    title: 'Premium AI Workflow Automation',
-    description: 'Eliminate repetitive tasks with our top-rated AI automation services that save time, enhance efficiency, and reduce errors in daily operations.',
-    icon: <Workflow className="w-6 h-6" />,
+    title: 'Custom SaaS AI Solutions',
+    description: "Tailored software solutions from Melbourne's premier AI agency that leverage cutting-edge AI to review documents and streamline operations.",
+    icon: <FileText className="w-6 h-6" />,
     delay: 0.3,
   },
   {
-    title: 'Strategic AI Consulting',
-    description: 'Expert AI guidance from the highest-rated AI agency to implement solutions that drive growth and provide competitive advantages.',
-    icon: <LineChart className="w-6 h-6" />,
+    title: 'AI Workflow Automation',
+    description: 'Melbourne\'s expert AI agency eliminating repetitive tasks with automation services that save time and enhance efficiency.',
+    icon: <Workflow className="w-6 h-6" />,
     delay: 0.4,
   },
 ];
@@ -42,9 +42,9 @@ const Services: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="section-heading">Top-Rated AI Services</h2>
+          <h2 className="section-heading">Melbourne's Top AI Agency Services</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our award-winning AI-powered services transform how businesses operate, automate tasks, and engage with customers.
+            Our award-winning AI-powered services including voice bots and automation transform how Melbourne businesses operate.
           </p>
         </div>
         
@@ -70,12 +70,12 @@ const Services: React.FC = () => {
               100<span className="text-aithos-accent">+</span>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-2">Premium AI Solutions for Your Business</h3>
+              <h3 className="text-2xl font-semibold mb-2">Melbourne's Premier Voice Bot & AI Solutions</h3>
               <p className="text-muted-foreground">
-                We offer over 100 expertly crafted AI automations that can be customized for your specific business needs. Our solutions integrate with all major platforms and tools.
+                As Melbourne's leading AI agency, we offer over 100 expertly crafted AI automations including voice bots that can be customized for your specific business needs.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
-                {['Gmail', 'Slack', 'Notion', 'Zapier', 'Trello', 'GitHub', 'Airtable', 'Google Workspace'].map((tool, i) => (
+                {['Voice Bots', 'AI Chatbots', 'Slack', 'Notion', 'Zapier', 'Trello', 'Melbourne Businesses', 'Google Workspace'].map((tool, i) => (
                   <span 
                     key={i} 
                     className={cn(
