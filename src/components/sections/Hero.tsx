@@ -1,6 +1,7 @@
+
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, GraduationCap, Clock, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
 
 const Hero: React.FC = () => {
@@ -70,55 +71,54 @@ const Hero: React.FC = () => {
   }
 
   return <section ref={heroRef} className="min-h-screen relative flex items-center overflow-hidden pt-20">
-      <BlurBlob size="xl" className="left-[10%] top-[15%] opacity-40" data-speed="1.5" data-rotation="0deg" />
-      <BlurBlob size="lg" color="accent" className="right-[15%] bottom-[20%] opacity-30" data-speed="1" data-rotation="45deg" />
+      <BlurBlob size="xl" className="left-[10%] top-[15%] opacity-30" data-speed="1.5" data-rotation="0deg" />
+      <BlurBlob size="lg" color="accent" className="right-[15%] bottom-[20%] opacity-20" data-speed="1" data-rotation="45deg" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Free Strategy Badge */}
-          <div className="inline-block bg-[#FEF7CD]/20 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up backdrop-blur-sm border border-[#FEF7CD]/20">
-            <span className="text-sm font-bold text-foreground">
-              <span className="text-green-500">EXPLODE</span> YOUR BUSINESS
+          {/* Refined Subtle Badge */}
+          <div className="inline-block bg-background/30 px-5 py-2 rounded-full mb-8 animate-fade-in-up backdrop-blur-sm border border-accent/10">
+            <span className="text-sm font-medium tracking-wide text-accent/90">
+              AI Strategy Consultancy
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 gradient-text">
             Aithos AI
           </h1>
           
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8 md:mb-10 animate-fade-in-up" style={{
+          <p className="text-xl md:text-2xl text-foreground/80 mb-10 md:mb-12 animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>Your competitors are already using AI—are you?</p>
+        }}>Transform your business with strategic AI implementation</p>
           
-          {/* Key Benefits */}
-          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
-            <div className="flex items-center gap-2 text-lg">
-              <CheckCircle className="text-green-500" size={20} />
-              <span>Zero Cost</span>
+          {/* Key Benefits - More refined */}
+          <div className="flex flex-col md:flex-row gap-6 justify-center mb-10 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
+            <div className="flex items-center gap-2">
+              <div className="h-[1px] w-5 bg-accent/60"></div>
+              <span className="text-foreground/70">Innovative Solutions</span>
             </div>
-            <div className="flex items-center gap-2 text-lg">
-              <CheckCircle className="text-green-500" size={20} />
-              <span>No Obligation</span>
+            <div className="flex items-center gap-2">
+              <div className="h-[1px] w-5 bg-accent/60"></div>
+              <span className="text-foreground/70">Expert Consultation</span>
             </div>
-            <div className="flex items-center gap-2 text-lg">
-              <CheckCircle className="text-green-500" size={20} />
-              <span>Pure Value</span>
+            <div className="flex items-center gap-2">
+              <div className="h-[1px] w-5 bg-accent/60"></div>
+              <span className="text-foreground/70">Tailored Strategy</span>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{
           animationDelay: '0.3s'
         }}>
-            <Button size="lg" className="bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-primary-foreground button-bounce button-glow" asChild>
-              <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black">
-                <span className="font-bold">👉</span> BOOK FREE CALL <span className="font-bold">👈</span>
+            <Button size="lg" variant="default" className="bg-accent/90 hover:bg-accent text-primary-foreground" asChild>
+              <a href="https://zcal.co/diontran/30min" className="flex items-center gap-2 text-black font-medium tracking-wide">
+                Schedule Consultation <ArrowRight size={16} />
               </a>
             </Button>
             
-            <Button size="lg" variant="outline" className="border-[#FEF7CD]/30 hover:bg-[#FEF7CD]/10 button-bounce" asChild>
-              <a href="#services" className="flex items-center gap-2">
-                <GraduationCap size={16} />
-                Learn More
+            <Button size="lg" variant="outline" className="border-accent/30 hover:bg-accent/10" asChild>
+              <a href="#services" className="flex items-center gap-2 tracking-wide">
+                Discover Services
               </a>
             </Button>
           </div>
