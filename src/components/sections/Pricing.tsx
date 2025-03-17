@@ -72,24 +72,24 @@ const Pricing: React.FC = () => {
     <section id="pricing" className="py-24 relative overflow-hidden">
       <BlurBlob 
         size="lg" 
-        className="top-[30%] left-[45%] opacity-30"
+        className="top-[30%] left-[45%] opacity-20"
       />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="section-heading">Subscriptions</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose a plan that fits your needs, with everything you need to stay organized and productive.
+            Choose a plan that fits your business requirements with all essential features to enhance customer engagement.
           </p>
           
-          <div className="flex items-center justify-center mt-8 gap-3">
-            <span className={`text-sm font-medium ${!isVoiceBot ? 'text-foreground' : 'text-muted-foreground'}`}>Chatbot</span>
+          <div className="flex items-center justify-center mt-10 gap-4">
+            <span className={`text-sm font-medium transition-colors ${!isVoiceBot ? 'text-foreground' : 'text-muted-foreground/70'}`}>Chatbot</span>
             <Switch 
               checked={isVoiceBot} 
               onCheckedChange={setIsVoiceBot}
-              className="data-[state=checked]:bg-[#FEF7CD] data-[state=checked]:text-black"
+              className="data-[state=checked]:bg-[#FEF7CD]/80 data-[state=checked]:text-black"
             />
-            <span className={`text-sm font-medium ${isVoiceBot ? 'text-foreground' : 'text-muted-foreground'}`}>Voice Bot</span>
+            <span className={`text-sm font-medium transition-colors ${isVoiceBot ? 'text-foreground' : 'text-muted-foreground/70'}`}>Voice Bot</span>
           </div>
         </div>
         
@@ -100,7 +100,7 @@ const Pricing: React.FC = () => {
               price={starterPrice}
               period="month"
               features={starterFeatures}
-              ctaText="14 days free trial"
+              ctaText="Start 14-day trial"
             />
           </div>
           
@@ -110,19 +110,19 @@ const Pricing: React.FC = () => {
               price={proPrice}
               period="month"
               features={proFeatures}
-              ctaText="14 days free trial"
+              ctaText="Start 14-day trial"
               popular={true}
             />
           </div>
         </div>
         
-        <div className="mt-12 text-center">
+        <div className="mt-14 text-center">
           <p className="text-muted-foreground">
-            Need a custom solution for your enterprise?
+            Need a tailored enterprise solution?
           </p>
           <a 
             href="#contact" 
-            className="inline-block mt-4 text-aithos-accent hover:underline"
+            className="inline-block mt-3 text-aithos-accent hover:underline font-medium"
           >
             Contact us for custom pricing
           </a>
