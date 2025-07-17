@@ -1,9 +1,9 @@
 
 import React, { lazy, Suspense } from 'react';
-import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
 import Footer from '@/components/layout/Footer';
 import VoiceflowWidget from '@/components/sections/VoiceflowWidget';
+import CartButton from '@/components/ui/CartButton';
 
 // Lazy load components that are not immediately visible
 const Services = lazy(() => import('@/components/sections/Services'));
@@ -59,7 +59,7 @@ const LoadingFallback = () => (
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <CartButton />
       <main>
         <Hero />
         <Suspense fallback={<LoadingFallback />}>

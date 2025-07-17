@@ -130,7 +130,13 @@ const Services: React.FC = () => {
                   </div>
                   
                   <div className="pt-4">
-                    <button className="w-full bg-accent/10 hover:bg-accent/20 text-accent font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+                    <button 
+                      className="w-full bg-accent/10 hover:bg-accent/20 text-accent font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+                      onClick={() => {
+                        // This will be connected to the cart functionality
+                        window.open('https://zcal.co/diontran/30min', '_blank');
+                      }}
+                    >
                       Hire This AI Employee
                     </button>
                   </div>
