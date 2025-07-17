@@ -9,7 +9,6 @@ const navLinks = [
   { name: 'Process', href: '#process' },
   { name: 'Case Studies', href: '#case-studies' },
   { name: 'Team', href: '#team' },
-  { name: 'Pricing', href: '#pricing' },
   { name: 'Contact', href: '#contact' },
 ];
 

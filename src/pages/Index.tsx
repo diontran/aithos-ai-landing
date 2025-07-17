@@ -3,7 +3,6 @@ import React, { lazy, Suspense } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
 import Footer from '@/components/layout/Footer';
-import Chatbot from '@/components/sections/Chatbot';
 
 // Lazy load components that are not immediately visible
 const Services = lazy(() => import('@/components/sections/Services'));
@@ -11,7 +10,6 @@ const Process = lazy(() => import('@/components/sections/Process'));
 const CaseStudies = lazy(() => import('@/components/sections/CaseStudies'));
 const Testimonials = lazy(() => import('@/components/sections/Testimonials'));
 const Team = lazy(() => import('@/components/sections/Team'));
-const Pricing = lazy(() => import('@/components/sections/Pricing'));
 const CTASection = lazy(() => import('@/components/sections/CTASection'));
 
 // Optimized Voice AI Widget with lazy loading and error boundary
@@ -50,12 +48,10 @@ const VoiceAIWidget = React.memo(() => {
   );
 });
 
-VoiceAIWidget.displayName = 'VoiceAIWidget';
-
 // Loading fallback component
 const LoadingFallback = () => (
-  <div className="flex items-center justify-center min-h-[200px]">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+  <div className="flex items-center justify-center min-h-[400px]">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-accent"></div>
   </div>
 );
 
@@ -71,15 +67,13 @@ const Index = () => {
           <CaseStudies />
           <Testimonials />
           <Team />
-          <Pricing />
           <CTASection />
         </Suspense>
       </main>
       <Footer />
       <VoiceAIWidget />
-      <Chatbot />
     </div>
   );
 };
 
-export default React.memo(Index);
+export default Index;
