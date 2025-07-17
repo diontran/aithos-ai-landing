@@ -1,24 +1,26 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import BlurBlob from '@/components/ui/BlurBlob';
-import { User, Linkedin, Twitter, Mail } from 'lucide-react';
+import { User, Linkedin, Twitter, Mail, Brain, Code, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const teamMembers = [
   {
     name: 'Dion Tran',
-    position: 'CEO',
-    bio: 'AI visionary Data Scientist specialising in machine learning and business automation.',
+    position: 'CEO & AI Architect',
+    bio: 'Leading the development of intelligent AI employees that transform how businesses operate.',
+    expertise: ['AI Development', 'Business Strategy', 'Team Leadership'],
     socials: {
-      linkedin: 'https://www.linkedin.com/in/dion-tran-8120221b3/',
+      linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
-      email: 'dion.doanh.tran@gmail.com'
+      email: 'mailto:contact@example.com'
     }
   },
   {
     name: 'Timmy Leung',
-    position: 'CTO',
-    bio: 'Software Engineer Expert in building scalable and efficient systems.',
+    position: 'CTO & AI Engineer',
+    bio: 'Building the next generation of AI employees with cutting-edge machine learning and automation.',
+    expertise: ['Machine Learning', 'System Architecture', 'AI Training'],
     socials: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
@@ -42,13 +44,13 @@ const Team: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Meet Our Team</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Meet Our AI Team</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our team of AI experts is passionate about helping businesses harness the power of artificial intelligence.
+            The human experts behind your AI employees. We design, develop, and maintain the intelligent workforce that powers your business.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           {teamMembers.map((member, index) => (
             <div 
               key={index}
@@ -62,10 +64,21 @@ const Team: React.FC = () => {
                       <User className="w-12 h-12 text-accent" />
                     </div>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-3 mb-6">
                       <h3 className="text-2xl font-bold">{member.name}</h3>
                       <p className="text-accent font-medium">{member.position}</p>
                       <p className="text-muted-foreground">{member.bio}</p>
+                      
+                      <div className="flex flex-wrap gap-2 justify-center mt-4">
+                        {member.expertise.map((skill, skillIndex) => (
+                          <span 
+                            key={skillIndex}
+                            className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </div>
 
                     <div className="flex gap-4 mt-auto">
@@ -90,6 +103,46 @@ const Team: React.FC = () => {
               </Card>
             </div>
           ))}
+        </div>
+
+        {/* AI Development Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-8 h-8 text-accent" />
+            </div>
+            <h3 className="text-3xl font-bold mb-2">50+</h3>
+            <p className="text-muted-foreground">AI Employee Types</p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Code className="w-8 h-8 text-accent" />
+            </div>
+            <h3 className="text-3xl font-bold mb-2">1000+</h3>
+            <p className="text-muted-foreground">Hours of AI Training</p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Zap className="w-8 h-8 text-accent" />
+            </div>
+            <h3 className="text-3xl font-bold mb-2">24/7</h3>
+            <p className="text-muted-foreground">AI Support</p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-accent/5 border border-accent/20 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">Work with Our AI Team</h3>
+            <p className="text-muted-foreground mb-6">
+              Get direct access to our AI experts for custom AI employee development and optimization.
+            </p>
+            <Button className="bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+              Schedule AI Consultation
+            </Button>
+          </div>
         </div>
       </div>
     </section>

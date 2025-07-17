@@ -1,35 +1,68 @@
 
 import React from 'react';
-import { MessageSquare, FileText, Workflow, LineChart } from 'lucide-react';
-import ServiceCard from '@/components/ui/ServiceCard';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { 
+  MessageSquare, 
+  FileText, 
+  BarChart3, 
+  Users, 
+  Calendar,
+  Mail,
+  Search,
+  Zap
+} from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
-import { cn } from '@/lib/utils';
 
-const services = [
+const aiRoles = [
   {
-    title: 'Award-Winning AI Chatbot Development',
-    description: 'Intelligent chatbots built by our expert team to answer client queries, recommend products, book appointments, and capture leads 24/7.',
-    icon: <MessageSquare className="w-6 h-6" />,
-    delay: 0.1,
+    title: 'AI Customer Support Agent',
+    description: 'Handle customer inquiries 24/7 with intelligent responses and problem resolution.',
+    icon: MessageSquare,
+    features: ['Multi-language support', 'Instant responses', 'Ticket management'],
+    availability: '24/7',
+    responseTime: '< 30 seconds'
   },
   {
-    title: 'Custom SaaS AI Solutions',
-    description: "Tailored software solutions that leverage cutting-edge AI to review documents, analyze data, and streamline operations for measurable business results.",
-    icon: <FileText className="w-6 h-6" />,
-    delay: 0.2,
+    title: 'AI Content Writer',
+    description: 'Create high-quality content for blogs, social media, and marketing materials.',
+    icon: FileText,
+    features: ['SEO optimized', 'Brand voice consistent', 'Plagiarism-free'],
+    availability: '24/7',
+    responseTime: '< 2 hours'
   },
   {
-    title: 'Premium AI Workflow Automation',
-    description: 'Eliminate repetitive tasks with our top-rated AI automation services that save time, enhance efficiency, and reduce errors in daily operations.',
-    icon: <Workflow className="w-6 h-6" />,
-    delay: 0.3,
+    title: 'AI Data Analyst',
+    description: 'Analyze business data and generate actionable insights and reports.',
+    icon: BarChart3,
+    features: ['Real-time analytics', 'Custom dashboards', 'Predictive insights'],
+    availability: '24/7',
+    responseTime: '< 1 hour'
   },
   {
-    title: 'Strategic AI Consulting',
-    description: 'Expert AI guidance from the highest-rated AI agency to implement solutions that drive growth and provide competitive advantages.',
-    icon: <LineChart className="w-6 h-6" />,
-    delay: 0.4,
+    title: 'AI HR Assistant',
+    description: 'Streamline recruitment, onboarding, and employee management processes.',
+    icon: Users,
+    features: ['Resume screening', 'Interview scheduling', 'Employee onboarding'],
+    availability: '24/7',
+    responseTime: '< 15 minutes'
   },
+  {
+    title: 'AI Scheduler',
+    description: 'Manage appointments, meetings, and calendar optimization automatically.',
+    icon: Calendar,
+    features: ['Smart scheduling', 'Conflict resolution', 'Time zone handling'],
+    availability: '24/7',
+    responseTime: '< 5 minutes'
+  },
+  {
+    title: 'AI Email Manager',
+    description: 'Sort, respond to, and manage email communications efficiently.',
+    icon: Mail,
+    features: ['Priority sorting', 'Auto-responses', 'Spam filtering'],
+    availability: '24/7',
+    responseTime: '< 10 minutes'
+  }
 ];
 
 const Services: React.FC = () => {
@@ -37,57 +70,85 @@ const Services: React.FC = () => {
     <section id="services" className="py-24 relative overflow-hidden">
       <BlurBlob 
         size="lg" 
-        className="left-[5%] top-[30%]"
+        color="accent" 
+        className="left-[5%] top-[10%] opacity-30"
+      />
+      <BlurBlob 
+        size="xl" 
+        className="right-[10%] bottom-[20%] opacity-20"
       />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="section-heading">Top-Rated AI Services</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our award-winning AI-powered services transform how businesses operate, automate tasks, and engage with customers.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+            Available AI Employee Roles
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Choose from our specialized AI employees designed to handle specific business functions. 
+            Each AI employee is trained for their role and ready to start immediately.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="animate-fade-in-up opacity-0"
-              style={{ animationDelay: `${service.delay}s` }}
-            >
-              <ServiceCard
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-              />
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {aiRoles.map((role, index) => {
+            const IconComponent = role.icon;
+            return (
+              <Card 
+                key={index}
+                className="glass-card group hover:border-accent/50 transition-all duration-300 hover:-translate-y-2"
+              >
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 rounded-lg bg-accent/10">
+                      <IconComponent className="w-6 h-6 text-accent" />
+                    </div>
+                    <CardTitle className="text-lg">{role.title}</CardTitle>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{role.description}</p>
+                </CardHeader>
+                
+                <CardContent className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {role.features.map((feature, featureIndex) => (
+                      <Badge key={featureIndex} variant="secondary" className="text-xs">
+                        {feature}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                    <div className="flex items-center gap-2 text-sm">
+                      <Zap className="w-4 h-4 text-accent" />
+                      <span className="text-muted-foreground">Available:</span>
+                      <span className="font-medium">{role.availability}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <Search className="w-4 h-4 text-accent" />
+                      <span className="text-muted-foreground">Response:</span>
+                      <span className="font-medium">{role.responseTime}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <button className="w-full bg-accent/10 hover:bg-accent/20 text-accent font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+                      Hire This AI Employee
+                    </button>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
         
-        <div className="mt-20 glass-card rounded-xl p-8 sm:p-12 animate-fade-in-up opacity-0" style={{ animationDelay: '0.5s' }}>
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="text-6xl sm:text-7xl font-bold text-center md:text-left gradient-text lg:text-8xl">
-              100<span className="text-aithos-accent">+</span>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-2">Premium AI Solutions for Your Business</h3>
-              <p className="text-muted-foreground">
-                We offer over 100 expertly crafted AI automations that can be customized for your specific business needs. Our solutions integrate with all major platforms and tools.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {['Gmail', 'Slack', 'Notion', 'Zapier', 'Trello', 'GitHub', 'Airtable', 'Google Workspace'].map((tool, i) => (
-                  <span 
-                    key={i} 
-                    className={cn(
-                      "inline-block px-3 py-1 rounded-full text-xs",
-                      i % 2 === 0 ? "bg-aithos-blue/20 text-aithos-blue-light" : "bg-secondary text-foreground/80"
-                    )}
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
+        <div className="text-center mt-16">
+          <div className="bg-accent/5 border border-accent/20 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">Need a Custom AI Employee?</h3>
+            <p className="text-muted-foreground mb-6">
+              We can create specialized AI employees tailored to your specific business needs and workflows.
+            </p>
+            <button className="bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+              Request Custom AI Employee
+            </button>
           </div>
         </div>
       </div>
