@@ -1,49 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useCart } from '@/contexts/CartContext';
 
 const CartButton: React.FC = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState<Array<{
-    id: string;
-    name: string;
-    price: number;
-    quantity: number;
-  }>>([]);
-
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-  const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-  const addToCart = (aiEmployee: { id: string; name: string; price: number }) => {
-    setCartItems(prev => {
-      const existing = prev.find(item => item.id === aiEmployee.id);
-      if (existing) {
-        return prev.map(item => 
-          item.id === aiEmployee.id 
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prev, { ...aiEmployee, quantity: 1 }];
-    });
-  };
-
-  const removeFromCart = (id: string) => {
-    setCartItems(prev => prev.filter(item => item.id !== id));
-  };
-
-  const updateQuantity = (id: string, quantity: number) => {
-    if (quantity <= 0) {
-      removeFromCart(id);
-      return;
-    }
-    setCartItems(prev => 
-      prev.map(item => 
-        item.id === id ? { ...item, quantity } : item
-      )
-    );
-  };
+  const { 
+    cartItems, 
+    totalItems, 
+    totalPrice, 
+    isCartOpen, 
+    setIsCartOpen, 
+    removeFromCart, 
+    updateQuantity 
+  } = useCart();
 
   const handleCheckout = () => {
     // Redirect to consultation booking

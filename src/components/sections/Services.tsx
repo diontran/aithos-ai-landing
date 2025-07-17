@@ -13,59 +13,74 @@ import {
   Zap
 } from 'lucide-react';
 import BlurBlob from '@/components/ui/BlurBlob';
+import { useCart } from '@/contexts/CartContext';
 
 const aiRoles = [
   {
+    id: 'customer-support',
     title: 'AI Customer Support Agent',
     description: 'Handle customer inquiries 24/7 with intelligent responses and problem resolution.',
     icon: MessageSquare,
     features: ['Multi-language support', 'Instant responses', 'Ticket management'],
     availability: '24/7',
-    responseTime: '< 30 seconds'
+    responseTime: '< 30 seconds',
+    price: 299
   },
   {
+    id: 'content-writer',
     title: 'AI Content Writer',
     description: 'Create high-quality content for blogs, social media, and marketing materials.',
     icon: FileText,
     features: ['SEO optimized', 'Brand voice consistent', 'Plagiarism-free'],
     availability: '24/7',
-    responseTime: '< 2 hours'
+    responseTime: '< 2 hours',
+    price: 399
   },
   {
+    id: 'data-analyst',
     title: 'AI Data Analyst',
     description: 'Analyze business data and generate actionable insights and reports.',
     icon: BarChart3,
     features: ['Real-time analytics', 'Custom dashboards', 'Predictive insights'],
     availability: '24/7',
-    responseTime: '< 1 hour'
+    responseTime: '< 1 hour',
+    price: 499
   },
   {
+    id: 'hr-assistant',
     title: 'AI HR Assistant',
     description: 'Streamline recruitment, onboarding, and employee management processes.',
     icon: Users,
     features: ['Resume screening', 'Interview scheduling', 'Employee onboarding'],
     availability: '24/7',
-    responseTime: '< 15 minutes'
+    responseTime: '< 15 minutes',
+    price: 349
   },
   {
+    id: 'scheduler',
     title: 'AI Scheduler',
     description: 'Manage appointments, meetings, and calendar optimization automatically.',
     icon: Calendar,
     features: ['Smart scheduling', 'Conflict resolution', 'Time zone handling'],
     availability: '24/7',
-    responseTime: '< 5 minutes'
+    responseTime: '< 5 minutes',
+    price: 249
   },
   {
+    id: 'email-manager',
     title: 'AI Email Manager',
     description: 'Sort, respond to, and manage email communications efficiently.',
     icon: Mail,
     features: ['Priority sorting', 'Auto-responses', 'Spam filtering'],
     availability: '24/7',
-    responseTime: '< 10 minutes'
+    responseTime: '< 10 minutes',
+    price: 199
   }
 ];
 
 const Services: React.FC = () => {
+  const { addToCart } = useCart();
+  
   return (
     <section id="services" className="py-24 relative overflow-hidden">
       <BlurBlob 
@@ -133,11 +148,14 @@ const Services: React.FC = () => {
                     <button 
                       className="w-full bg-accent/10 hover:bg-accent/20 text-accent font-medium py-2 px-4 rounded-lg transition-colors duration-200"
                       onClick={() => {
-                        // This will be connected to the cart functionality
-                        window.open('https://zcal.co/diontran/30min', '_blank');
+                        addToCart({
+                          id: role.id,
+                          name: role.title,
+                          price: role.price
+                        });
                       }}
                     >
-                      Hire This AI Employee
+                      Hire This AI Employee - ${role.price}/month
                     </button>
                   </div>
                 </CardContent>

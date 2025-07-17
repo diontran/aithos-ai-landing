@@ -4,6 +4,7 @@ import Hero from '@/components/sections/Hero';
 import Footer from '@/components/layout/Footer';
 import VoiceflowWidget from '@/components/sections/VoiceflowWidget';
 import CartButton from '@/components/ui/CartButton';
+import { CartProvider } from '@/contexts/CartContext';
 
 // Lazy load components that are not immediately visible
 const Services = lazy(() => import('@/components/sections/Services'));
@@ -58,23 +59,25 @@ const LoadingFallback = () => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <CartButton />
-      <main>
-        <Hero />
-        <Suspense fallback={<LoadingFallback />}>
-          <Services />
-          <Process />
-          <CaseStudies />
-          <Testimonials />
-          <Team />
-          <CTASection />
-        </Suspense>
-      </main>
-      <Footer />
-      <VoiceAIWidget />
-      <VoiceflowWidget />
-    </div>
+    <CartProvider>
+      <div className="min-h-screen">
+        <CartButton />
+        <main>
+          <Hero />
+          <Suspense fallback={<LoadingFallback />}>
+            <Services />
+            <Process />
+            <CaseStudies />
+            <Testimonials />
+            <Team />
+            <CTASection />
+          </Suspense>
+        </main>
+        <Footer />
+        <VoiceAIWidget />
+        <VoiceflowWidget />
+      </div>
+    </CartProvider>
   );
 };
 
