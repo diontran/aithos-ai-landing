@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, X } from 'lucide-react';
+import { ShoppingCart, X, CreditCard, MessageCircle } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
+import { createCheckoutSession } from '@/lib/stripe';
 
 const CartButton: React.FC = () => {
   const { 
@@ -14,8 +15,11 @@ const CartButton: React.FC = () => {
     updateQuantity 
   } = useCart();
 
-  const handleCheckout = () => {
-    // Redirect to consultation booking
+  const handleStripeCheckout = async () => {
+    await createCheckoutSession(cartItems);
+  };
+
+  const handleConsultation = () => {
     window.open('https://zcal.co/diontran/30min', '_blank');
   };
 
@@ -109,15 +113,29 @@ const CartButton: React.FC = () => {
                   </span>
                 </div>
                 <Button
-                  onClick={handleCheckout}
+                  onClick={handleStripeCheckout}
                   className="w-full bg-[#FEF7CD] hover:bg-[#FEF7CD]/90 text-black font-medium py-3"
                   size="lg"
                 >
-                  Schedule Consultation
+                  <CreditCard className="w-4 h-4 mr-2" />
+                  Pay with Stripe
                 </Button>
-                <p className="text-xs text-muted-foreground text-center mt-2">
-                  Book a call to discuss your AI employee needs
-                </p>
+                
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-muted-foreground mb-2">or</p>
+                  <Button
+                    onClick={handleConsultation}
+                    variant="outline"
+                    className="w-full text-sm"
+                    size="sm"
+                  >
+                    <MessageCircle className="w-3 h-3 mr-2" />
+                    Schedule Free Consultation
+                  </Button>
+                  <p className="text-xs text-muted-foreground text-center mt-2">
+                    Discuss your needs with our AI experts
+                  </p>
+                </div>
               </div>
             )}
           </div>
